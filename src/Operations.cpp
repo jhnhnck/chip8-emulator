@@ -199,7 +199,7 @@ void parseInstruction(CPU* cpu, unsigned short code) {
       cpu->pc += 2;
     }
 
-  } else if ((code & 0xF0FF) == 0xF007) {  // Fx0A -> LD Vx, DT
+  } else if ((code & 0xF0FF) == 0xF007) {  // Fx07 -> LD Vx, DT
     x = (code >> 8) & 0xF;
     fmt::print("load V{:X} DT\n", x);
 
