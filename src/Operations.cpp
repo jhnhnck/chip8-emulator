@@ -234,7 +234,9 @@ void parseInstruction(CPU* cpu, unsigned short code) {
     x = (code >> 8) & 0xF;
     fmt::print("add I V{:X}\n", x);
 
-    cpu->i = (cpu->i + cpu->registers[x]) & 0xFFF;
+    unsigned short sum = cpu->i + cpu->registers[x];
+    cpu->i = sum & 0xFFF;
+    cpu->registers[0xF] = (sum > 0xFFF);
 
   } else if ((code & 0xF0FF) == 0xF029) {  // Fx29 -> LD F, Vx
     x = (code >> 8) & 0xF;
