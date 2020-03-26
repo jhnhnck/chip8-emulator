@@ -53,11 +53,9 @@ void drawSprite(CPU* cpu, unsigned char x, unsigned char y, unsigned char height
 
     for (int j = 0; j < 8; j++) {
       unsigned char pixelX = (x+j) % 64, pixelY = (y+i) % 32;
-      fmt::print(" -> Drawing ({}, {})\n", pixelX, pixelY);
 
       // The bit in slice indexed by j xor current bit value
-      if ((slice & (0x80 >> j)) ^ (cpu->bitScreen[pixelY][pixelX] == COLOR_WHITE)) {
-        if (cpu->bitScreen[pixelY][pixelX] != COLOR_WHITE) { cpu->registers[0xF] = 1; }
+      if (((slice >> j) & 0x1) ^ (cpu->bitScreen[pixelY][pixelX] == COLOR_WHITE)) {
         cpu->bitScreen[pixelY][pixelX] = COLOR_WHITE;
 
       } else {
