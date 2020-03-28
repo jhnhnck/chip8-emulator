@@ -57,13 +57,6 @@ int main() {
   GLuint texture;
   glGenTextures(1, &texture);
 
-  float vertices[] = {
-      -0.95, 0.90,
-      0.95, 0.90,
-      0.95, -0.90,
-      -0.95, -0.90
-  };
-
   /* Loop until the user closes the window */
   while (!glfwWindowShouldClose(window)) {
     /* Wait for clock cycle */
