@@ -3,22 +3,20 @@
  * Copyright © 2020 John Hancock. All rights reserved
  */
 
-#define WIN32_LEAN_AND_MEAN
-#define WIN32_HIGH_RES_TIMING
+#include "Emulator.h"
+#include "Resource.h"
+
 #include <Windows.h>
 #include <mmsystem.h>
 #pragma comment(lib, "winmm.lib")
 
-#include <chrono>
-#include <thread>
-#include "resource.h"
-#include "Operations.h"
-#include <fmt/core.h>
-
-#define GLFW_EXPOSE_NATIVE_WIN32
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
+
+#include <chrono>
+#include <thread>
+#include <fmt/core.h>
 
 using namespace std;
 

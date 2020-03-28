@@ -3,9 +3,9 @@
  * Copyright © 2020 John Hancock. All rights reserved
  */
 
-#define WIN32_LEAN_AND_MEAN
+#include "Emulator.h"
+
 #include <Windows.h>
-#include "Operations.h"
 #include <cstdlib>
 #include <fmt/core.h>
 

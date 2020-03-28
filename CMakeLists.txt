@@ -18,7 +18,7 @@ add_subdirectory(lib/glew-2.1.0/build/cmake)
 
 add_executable(
         chip8_emulator WIN32
-        include/Operations.h
+        include/Emulator.h
         src/Operations.cpp
         resources/chip8.rc
         src/Window.cpp
