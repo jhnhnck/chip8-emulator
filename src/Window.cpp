@@ -51,7 +51,7 @@ int main() {
   glfwMakeContextCurrent(window);
 
   // Init Emulator
-  CPU cpu = initEmulator("../../roms/pong2.ch8");
+  CPU cpu = initEmulator(ROM_NAME);
 
   // Init Textures
   GLuint texture;

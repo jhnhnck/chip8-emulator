@@ -16,6 +16,8 @@
 
 /* --- Constants Declaration --- */
 
+const std::string ROM_NAME = "../../roms/test_opcode.ch8";
+
 const short SPRITES_ADDRESS = 0x100;
 const short INIT_ADDRESS = 0x200;
 
