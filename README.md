@@ -1,5 +1,7 @@
 # CHIP-8 Emulator
 
+![](resources/emulator.png)
+
 ## Building
 
 Required Dependencies
