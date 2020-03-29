@@ -31,7 +31,7 @@ int main() {
   if (!glewInit() || !glfwInit()) { return -1; }
 
   /* Create a windowed mode window and its OpenGL context */
-  window = glfwCreateWindow(640, 320, "CHIP-8 Emulator", nullptr, nullptr);
+  window = glfwCreateWindow(960, 480, "CHIP-8 Emulator", nullptr, nullptr);
   glfwSetWindowAspectRatio(window, 2, 1);
   HWND hwnd = glfwGetWin32Window(window);
 
