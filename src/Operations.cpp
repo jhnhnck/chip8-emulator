@@ -256,7 +256,7 @@ void parseInstruction(CPU* cpu, unsigned short code) {
     x = (code >> 8) & 0xF;
     fmt::print("ld [I] V{:X}\n", x);
 
-    for (int offset = 0; offset < x; offset++) {
+    for (int offset = 0; offset <= x; offset++) {
       cpu->memory[cpu->i + offset] = cpu->registers[offset];
     }
 
@@ -266,7 +266,7 @@ void parseInstruction(CPU* cpu, unsigned short code) {
     x = (code >> 8) & 0xF;
     fmt::print("ld V{:X} [I]\n", x);
 
-    for (int offset = 0; offset < x; offset++) {
+    for (int offset = 0; offset <= x; offset++) {
       cpu->registers[offset] = cpu->memory[cpu->i + offset];
     }
 
