@@ -57,7 +57,7 @@ void drawSprite(CPU* cpu, unsigned char x, unsigned char y, unsigned char height
       unsigned char pixelX = (x+j) % 64, pixelY = (y+i) % 32;
 
       // The bit in slice indexed by j xor current bit value
-      if (((slice >> j) & 0x1) ^ (cpu->bitScreen[pixelY][pixelX] == COLOR_WHITE)) {
+      if (((slice >> (7 - j)) & 0x1) ^ (cpu->bitScreen[pixelY][pixelX] == COLOR_WHITE)) {
         cpu->bitScreen[pixelY][pixelX] = COLOR_WHITE;
 
       } else {
