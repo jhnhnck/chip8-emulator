@@ -16,7 +16,6 @@
 
 #include <chrono>
 #include <thread>
-#include <fmt/core.h>
 
 using namespace std;
 
