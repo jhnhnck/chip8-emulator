@@ -44,7 +44,7 @@ const unsigned char SPRITES_TABLE[] = {
 };
 
 const unsigned char KEY_BINDINGS[] = {
-    '1', '2', '3', '4', 'Q', 'W', 'E', 'R', 'A', 'S', 'D', 'F', 'Z', 'X', 'C', 'V'
+    'X', '1', '2', '3', 'Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'C', '4', 'R', 'F', 'V'
 };
 
 const unsigned int COLOR_BLACK = 0xFF000000;
@@ -67,7 +67,6 @@ typedef struct T_CPU {
 CPU initEmulator(const std::string &rom);
 void cpuCycle(CPU* cpu);
 
-void clearScreen(CPU* cpu);
 void drawSprite(CPU* cpu, unsigned char x, unsigned char y, unsigned char height);
 void parseInstruction(CPU* cpu, unsigned short code);
 
